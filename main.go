@@ -6,6 +6,8 @@ import (
 	"strings"
 )
 
+var version = "dev"
+
 func main() {
 	if len(os.Args) < 2 {
 		tl, err := EnsureTasksFile()
@@ -19,6 +21,11 @@ func main() {
 
 	if os.Args[1] == "help" || os.Args[1] == "--help" || os.Args[1] == "-h" {
 		PrintHelp()
+		return
+	}
+
+	if os.Args[1] == "version" || os.Args[1] == "--version" || os.Args[1] == "-v" {
+		PrintVersion()
 		return
 	}
 

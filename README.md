@@ -47,6 +47,7 @@ mdt undo <n>     Mark task as not done
 mdt rm <n>       Remove a task
 mdt stats        Show statistics
 mdt init         Create TASKS.md template
+mdt version      Show version
 ```
 
 ## Example

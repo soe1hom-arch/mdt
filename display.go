@@ -120,6 +120,7 @@ func PrintHelp() {
   %s      Remove a task
   %s      Show statistics
   %s      Create a TASKS.md template
+  %s      Show version
   %s      Show this help
 
  %s
@@ -138,6 +139,7 @@ func PrintHelp() {
 		color(cyan, "mdt rm <number>"),
 		color(cyan, "mdt stats"),
 		color(cyan, "mdt init"),
+		color(cyan, "mdt version"),
 		color(cyan, "mdt help"),
 		color(bold, "Examples:"),
 		color(dim, "  mdt add \"Buy groceries\""),
@@ -145,6 +147,10 @@ func PrintHelp() {
 		color(dim, "  mdt done 1"),
 		color(dim, "  mdt stats"),
 	)
+}
+
+func PrintVersion() {
+	fmt.Printf("%s %s\n", color(bold+blue, "mdt"), version)
 }
 
 func sortedKeys(m map[string][]Task) []string {
