@@ -1,0 +1,5 @@
+/mdt
+*.exe
+*.log
+TASKS.md
+mdt-linux-arm64.tar.gz
